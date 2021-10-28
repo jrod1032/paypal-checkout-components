@@ -17,13 +17,16 @@ type ButtonAnimationCss ={|
     ANIMATION_CONTAINER : string,
     PAYPAL_LOGO : string,
     ANIMATION_LABEL_CONTAINER : string,
+    ANIMATION_LABEL_ELEMENT : string,
     PAYPAL_BUTTON_LABEL : string
 |};
 
 export type ButtonSizes = {|
     large : ButtonSizeProperties,
     huge : ButtonSizeProperties,
-    cssClasses : ButtonAnimationCss
+    cssClasses : ButtonAnimationCss,
+    tiny : ButtonSizeProperties,
+    medium : ButtonSizeProperties
 |};
 
 export type ButtonAnimation = {|

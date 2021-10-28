@@ -469,6 +469,17 @@ export const getButtonsComponent : () => ButtonsComponent = memoize(() => {
                 value:      ({ props }) => getRenderedButtons(props)
             },
 
+            buttonSize: {
+                type: 'string',
+                queryParam: true,
+                required: false,
+                value: ({ props }) => {
+                    console.log('buttonWidth options', props);
+                    console.log('another change herr ein zoid')
+                    return 'small';
+                }
+            },
+
             csp: {
                 type:     'object',
                 required: false,

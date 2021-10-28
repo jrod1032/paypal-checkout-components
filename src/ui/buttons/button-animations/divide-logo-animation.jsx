@@ -10,7 +10,8 @@ import type { ButtonAnimationOutputParams, LabelOptions, ButtonSizes } from './t
 
 export const ANIMATION = {
     LABEL_CONTAINER: ('divide-logo-animation-label-container' : 'divide-logo-animation-label-container'),
-    CONTAINER:       ('divide-logo-animation' : 'divide-logo-animation')
+    CONTAINER:       ('divide-logo-animation' : 'divide-logo-animation'),
+    ELEMENT:         ('fadeout-logo-and-show-label-animation-element' : 'fadeout-logo-and-show-label-animation-element'),
 };
 
 export function LabelForDivideLogoAnimation({ animationLabelText } : LabelOptions) : ChildType {
@@ -66,12 +67,15 @@ function animationConfiguration () : ButtonSizes {
     return {
         large:      { min: BUTTON_SIZE_STYLE.large.minWidth },
         huge:       { max: BUTTON_SIZE_STYLE.huge.maxWidth },
+        tiny:       { min: BUTTON_SIZE_STYLE.tiny.minWidth },
+        medium:       { max: BUTTON_SIZE_STYLE.medium.maxWidth },
         cssClasses: {
             DOM_READY:                  CLASS.DOM_READY,
             ANIMATION_CONTAINER:        ANIMATION.CONTAINER,
             PAYPAL_LOGO:                LOGO_CLASS.LOGO,
             ANIMATION_LABEL_CONTAINER:  ANIMATION.LABEL_CONTAINER,
-            PAYPAL_BUTTON_LABEL:        CLASS.BUTTON_LABEL
+            PAYPAL_BUTTON_LABEL:        CLASS.BUTTON_LABEL,
+            ANIMATION_LABEL_ELEMENT:    ANIMATION.ELEMENT
         }
     };
 }
